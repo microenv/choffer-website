@@ -173,3 +173,15 @@ service.addEndpoint({
 
 module.exports = service;
 ```
+
+## Run Your Project
+
+Finally, start your application. In case you followed our [Install Instructions](./install) you should have a start script
+
+```shell
+yarn start
+```
+
+## Open in the Browser
+
+Visit <a href="http://localhost:8080/todos" target="_blank">http://localhost:8080/todos</a>

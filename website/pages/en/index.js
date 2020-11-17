@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require("../../core/CompLibrary.js");
 
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -15,10 +15,10 @@ const GridBlock = CompLibrary.GridBlock;
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const { siteConfig, language = "" } = this.props;
+    const { baseUrl, docsUrl } = siteConfig;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     const docUrl = (doc) => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = (props) => (
@@ -64,9 +64,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl("introduction")}>Getting Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -76,14 +74,15 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const { config: siteConfig, language = "" } = this.props;
+    const { baseUrl } = siteConfig;
 
     const Block = (props) => (
       <Container
-        padding={['bottom', 'top']}
+        padding={["bottom", "top"]}
         id={props.id}
-        background={props.background}>
+        background={props.background}
+      >
         <GridBlock
           align="center"
           contents={props.children}
@@ -95,9 +94,17 @@ class Index extends React.Component {
     const FeatureCallout = () => (
       <div
         className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+        style={{ textAlign: "center" }}
+      >
+        <h2>Express Based</h2>
+        <MarkdownBlock>
+          Everything you do in express, you can also do using choffer.
+        </MarkdownBlock>
+        <MarkdownBlock>
+          You are not going to learn a new framework, choffer is only a express
+          server with CORS, Body Parser, Database Helpers already setted up for
+          getting your API done in record time.
+        </MarkdownBlock>
       </div>
     );
 
@@ -106,12 +113,12 @@ class Index extends React.Component {
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
+              "To make your landing page more attractive, use illustrations! Check out " +
+              "[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. " +
+              "The illustrations you see on this page are from unDraw.",
             image: `${baseUrl}img/undraw_code_review.svg`,
-            imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            imageAlign: "left",
+            title: "Wonderful SVG Illustrations",
           },
         ]}
       </Block>
@@ -122,10 +129,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
+              "This is another description of how this project is useful",
             image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
-            title: 'Description',
+            imageAlign: "right",
+            title: "Description",
           },
         ]}
       </Block>
@@ -136,10 +143,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
+              "Each new Docusaurus project has **randomly-generated** theme colors.",
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
-            imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            imageAlign: "right",
+            title: "Randomly Generated Theme Colors",
           },
         ]}
       </Block>
@@ -149,16 +156,18 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
+            title: "Batteries Included",
+            content:
+              "The goal is to create a REST API in 10 minutes.\n\nDo you have 10 minutes?",
             image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            imageAlign: "top",
           },
           {
-            content: 'The content of my second feature',
+            title: "Easy to learn",
+            content:
+              "Just install, create a service, and create an endpoint.\n\nTry it out!",
             image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
+            imageAlign: "top",
           },
         ]}
       </Block>
@@ -178,7 +187,7 @@ class Index extends React.Component {
         ));
 
       const pageUrl = (page) =>
-        baseUrl + (language ? `${language}/` : '') + page;
+        baseUrl + (language ? `${language}/` : "") + page;
 
       return (
         <div className="productShowcaseSection paddingBottom">
@@ -186,7 +195,7 @@ class Index extends React.Component {
           <p>This project is used by all these people</p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
+            <a className="button" href={pageUrl("users.html")}>
               More {siteConfig.title} Users
             </a>
           </div>
@@ -200,10 +209,12 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
+          {/*
           <LearnHow />
           <TryOut />
           <Description />
           <Showcase />
+          */}
         </div>
       </div>
     );

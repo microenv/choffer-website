@@ -5,21 +5,17 @@
     "previous": "Previous",
     "tagline": "Create blazing fast REST APIs",
     "docs": {
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "database-mongodb": {
+        "title": "Connect to MongoDB",
+        "sidebar_label": "MongoDB"
       },
-      "doc2": {
-        "title": "document number 2"
+      "database-mysql-mariadb": {
+        "title": "Connect to MySQL / MariaDB",
+        "sidebar_label": "MySQL / MariaDB"
       },
-      "doc3": {
-        "title": "This is document number 3"
-      },
-      "doc4": {
-        "title": "Other Document"
-      },
-      "doc5": {
-        "title": "Fifth Document"
+      "database-other": {
+        "title": "Other Databases",
+        "sidebar_label": "Other Databases"
       },
       "hello-world": {
         "title": "Your First REST API",
@@ -31,19 +27,28 @@
       },
       "introduction": {
         "title": "Introduction"
+      },
+      "middleware-database": {
+        "title": "Database Helpers",
+        "sidebar_label": "Database Helpers"
+      },
+      "middleware-request-validation": {
+        "title": "Validate Payload and Headers",
+        "sidebar_label": "Validate Payload / Headers"
+      },
+      "middlewares": {
+        "title": "Middlewares",
+        "sidebar_label": "Middlewares"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Docs": "Docs"
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Database": "Database",
+      "Middlewares": "Middlewares",
+      "First Category": "First Category"
     }
   },
   "pages-strings": {

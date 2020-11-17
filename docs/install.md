@@ -19,7 +19,7 @@ yarn init
 Install the package
 
 ```shell
-yarn add @microenv/choffer
+yarn add choffer
 ```
 
 Create a start script on your `package.json`:
